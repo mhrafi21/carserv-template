@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font awesome -->
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- googel font -->
+    <!-- swipper js link -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    
+    <!-- swipper js link -->
+    <!-- tailwindcss and daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwindcss and daisy ui -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                main: "#D81324",
+                secondaryColor: "#0B2154",
+                light: "#F2F2F2",
+                dark:"#111111"
+              }
+            
+            }
+          }
+        }
+      </script>
+      <style>
+        .sans-serif{
+            font-family: 'Open Sans', sans-serif;
+        }
+      </style>
+<!-- custom css link -->
+<link rel="stylesheet" href="./css/style.css">
+<!-- custom css link -->
+    <title>Carpentar Web Template</title>
+</head>
+<body class = "sans-serif" >
+   <header>
+    <div class="top-bar bg-light">
+        <div class="container mx-auto px-4">
+            <div class = "hidden lg:block">
+                <div class="top-bar-row  flex justify-between h-12 items-center text-sm ">
+                    <div class="left-items flex gap-5">
+                        <div>
+                            <p><i class="fa-solid fa-location-dot text-main mr-1"></i> 123 Street, New York, USA</p>
+                        </div>
+                        <div>
+                            <p><i class="fa-solid fa-clock text-main mr-3"></i>Mon - Fri : 10.00 AM - 8 PM</p>
+                        </div>
+                    </div>
+                    <div class="right-items flex items-center gap-12">
+                        <div>
+                            <p><i class = "fa-solid fa-phone text-main mr-3"></i>+012 345 678</p>
+                        </div>
+                        <div>
+                            <p>
+                               <a href="http://www.facebook.com" target="_blank"> <i class="fa-brands fa-square-facebook text-main  p-3 bg-white"></i></i></a>
+                               <a href="http://www.twitter.com" target="_blank"> <i class = "fa-brands fa-twitter text-main p-3 bg-white"></i></a>
+                               <a href="http://www.whatsapp.com" target="_blank"> <i class = "fa-brands fa-whatsapp text-main p-3 bg-white"></i></a>
+                               <a href="http://www.telegram.com" target="_blank"> <i class = "fa-brands fa-telegram text-main p-3 bg-white"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- navbar -->
+        <div class="navb bg-white lg-size lg:block hidden">
+            <div class="container mx-auto px-4">
+                <nav class = "flex justify-between items-center h-20">
+                    <div class="logo">
+                        <a class = "text-main text-4xl" href="#"> <span class = "uppercase">W</span>oo<span class = "uppercase">dy</span></a>
+                    </div>
+                    <ul class = "flex gap-8">
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">SERVICES</a></li>
+                        <li><a href="#">PROJECTS</a></li>
+                        <li><a href="#">PAGES</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                        <li><a class = "bg-main text-white h-full p-5 " href="">Get A Quote <i class="ml-3 fa-solid fa-arrow-right"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- mobile  -->
+        <div class="navb bg-white lg-size lg:hidden block">
+            <div class = "container mx-auto px-4">
+                <nav class="flex justify-between  h-20 items-center">
+                    <div class="logo">
+                        <a class = "text-main text-4xl" href="#"> <span class = "uppercase">W</span>oo<span class = "uppercase">dy</span></a>
+                    </div>
+                    <div>
+                        <ul class = "absolute mobile-nav text-light left-0 gap-3 w-52 top-0 bg-main z-50 h-screen flex flex-col">
+                            <li class = "ml-5 mt-5 mb-3"><a class = "text-white text-4xl" href="#"> <span class = "uppercase">W</span>oo<span class = "uppercase">dy</span></a></li>
+                            <li class = "ml-5"><a href="#">HOME</a></li>
+                            <li class = "ml-5"><a href="#">ABOUT</a></li>
+                            <li class = "ml-5"><a href="#">SERVICES</a></li>
+                            <li class = "ml-5"><a href="#">PROJECTS</a></li>
+                            <li class = "ml-5"><a href="#">PAGES</a></li>
+                            <li class = "ml-5"><a href="#">CONTACT</a></li>
+                            <li class = "ml-5 mt-10"><a class = "bg-white text-main h-full p-5 " href="">Get A Quote <i class="ml-3 fa-solid fa-arrow-right"></i></a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <i id = "openMenu" class="fa-solid fa-bars text-2xl"></i>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- mobile  -->
+
+        <!-- mobile  -->
+    <!-- navbar -->
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+
+        <div class="swiper-slide w-full h-screen flex justify-center items-center img-slider" style="background:url(./img/carousel-bg-2.jpg);height: 100vh;width: 100%; object-fit: cover;background-position: center; background-size: cover;background-repeat: no-repeat; background: rgba(0,0,0.0.5)">
+            <div class = "z-50  grid
+            container  md:grid-cols-2 gap-2 mx-auto px-4">
+                <div class = " flex flex-col gap-8 w-[80%] md:w-[100%] md:m-0 m-auto text-center md:text-start">
+                <h4 class = "text-white uppercase text-lg font-[700]">//Car Servicing//</h4>
+                <h2 class = "text-3xl md:text-5xl lg:text-6xl font-[800] text-white">Qualified Car Repair Serivce Center.</h2>
+    
+                <div> 
+                <button class = "py-4 px-12  bg-main text-white">LEARN MORE <i class = "fa fa-arrow-right ml-3"></i></button></div>
+                </div>
+                <div class = "z-50 text-white hidden md:block">
+                   <img class = "md:w-[100%] lg:w-[80%] " src="./img/carousel-2.png" alt="no image found" >
+                </div>
+            </div>
+            </div>
+            <div class="swiper-slide w-full h-screen flex justify-center items-center img-slider" style="background:url(./img/carousel-bg-2.jpg);height: 100vh;width: 100%; object-fit: cover;background-position: center; background-size: cover;background-repeat: no-repeat; background: rgba(0,0,0.0.5)">
+                <div class = "z-50  grid
+                container  md:grid-cols-2 gap-2 mx-auto px-4">
+                    <div class = " flex flex-col gap-8 w-[80%] md:w-[100%] md:m-0 m-auto text-center md:text-start">
+                    <h4 class = "text-white uppercase text-lg font-[700]">//Car Servicing//</h4>
+                    <h2 class = "text-3xl md:text-5xl lg:text-6xl font-[800] text-white">Qualified Car Repair Serivce Center.</h2>
+        
+                    <div> 
+                    <button class = "py-3 px-5  bg-white text-dark">LEARN MORE </button></div>
+                    </div>
+                    <div class = "z-50 text-white hidden md:block">
+                       <img class = "md:w-[100%] lg:w-[80%] " src="./img/carousel-2.png" alt="no image found" >
+                    </div>
+                </div>
+                </div>
+                <div class="swiper-slide w-full h-screen flex justify-center items-center img-slider" style="background:url(./img/carousel-bg-2.jpg);height: 100vh;width: 100%; object-fit: cover;background-position: center; background-size: cover;background-repeat: no-repeat; background: rgba(0,0,0.0.5)">
+                    <div class = "z-50  grid
+                    container  md:grid-cols-2 gap-2 mx-auto px-4">
+                        <div class = " flex flex-col gap-8 w-[80%] md:w-[100%] md:m-0 m-auto text-center md:text-start">
+                        <h4 class = "text-white uppercase text-lg font-[700]">//Car Servicing//</h4>
+                        <h2 class = "text-3xl md:text-5xl lg:text-6xl font-[800] text-white">Qualified Car Repair Serivce Center.</h2>
+            
+                        <div> 
+                        <button class = "py-3 px-5  bg-white text-dark">LEARN MORE </button></div>
+                        </div>
+                        <div class = "z-50 text-white hidden md:block">
+                           <img class = "md:w-[100%] lg:w-[80%] " src="./img/carousel-2.png" alt="no image found" >
+                        </div>
+                    </div>
+                    </div>
+
+     
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+   </header>
+
+
+   <!-- main start -->
+ <main>
+    <section class = "mt-24">
+        <div>
+            <div class="container mx-auto px-4">
+                <!-- row -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <!-- col -->
+                    <div class = "flex px-8 py-12">
+                        <div>
+                            <i class="fa fa-certificate fa-3x text-main flex-shrink-0"></i>
+                        </div>
+                        <div class = "flex flex-col ml-5 gap-3 ">
+                            <h3 class = "text-xl text-dark font-[800] tracking-tigher">Quality Servicing</h3>
+                            <p>Diam dolor diam ipsum sit amet diam et eos erat ipsum</p>
+                            <a class = "underline" href="!#">Read More</a>
+                        </div>
+                    </div>
+                    <!-- col -->
+                                <!-- col -->
+                                <div class = "flex bg-light px-8 py-12">
+                                    <div>
+                                        <i class="fa fa-certificate fa-3x text-main flex-shrink-0"></i>
+                                    </div>
+                                    <div class = "flex flex-col ml-5 gap-3 ">
+                                        <h3 class = "text-xl text-dark font-[800] tracking-tigher">Quality Servicing</h3>
+                                        <p>Diam dolor diam ipsum sit amet diam et eos erat ipsum</p>
+                                        <a class = "underline" href="!#">Read More</a>
+                                    </div>
+                                </div>
+                                <!-- col -->
+                                            <!-- col -->
+                    <div class = "flex px-8 py-12">
+                        <div>
+                            <i class="fa fa-certificate fa-3x text-main flex-shrink-0"></i>
+                        </div>
+                        <div class = "flex flex-col ml-5 gap-3 ">
+                            <h3 class = "text-xl text-dark font-[800] tracking-tigher">Quality Servicing</h3>
+                            <p>Diam dolor diam ipsum sit amet diam et eos erat ipsum</p>
+                            <a class = "underline" href="!#">Read More</a>
+                        </div>
+                    </div>
+                    <!-- col -->
+                </div>
+            </div>
+        </div>
+   </section>
+   <section class = "mt-24">
+        <div class="about-us">
+            <div class="container mx-auto px-4">
+                <div class="about-row grid  md:grid-cols-2 gap-16 ">
+                    <div class = "flex justify-center items-center relative">
+                        <img  src="./img/about.jpg" alt="no image found">
+                        <div class = "absolute -right-8 -top-0 bg-[rgba(0,0,0,0.3)] p-10 text-white text-xl font-[600] "><span class = "text-4xl">15</span> Years Experience</div>
+                    </div>
+                    <div class = 'flex flex-col gap-8 mb-12 lg:0 md:mt-12 lg:mt-0 mt-0 '>
+                        <h4 class = "text-xl text-main font-[600] uppercase">//About Us//</h4>
+                        <h2 class = "text-4xl  font-[800]"><span class = "text-main">CarServ</span> Is The Best Place For Your Auto Care</h2>
+                        <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
+                        
+                            <div class = "grid gap-6">
+                                <!-- col -->
+                                <div class = "flex items-center gap-5">
+                                    <div>
+                                        <p class = "font-[700] p-3 bg-light">01</p>
+                                    </div>
+                                    <div class = "flex gap-2 flex-col">
+                                        <p class = "font-[700] tracking-tighter">Professional & Expert</p>
+                                        <p>Diam dolor diam ipsum sit amet diam et eos</p>
+                                    </div>
+                                </div>
+                                 <!-- col -->
+                                           <!-- col -->
+                                <div class = "flex items-center gap-5">
+                                    <div>
+                                        <p class = "font-[700] p-3 bg-light">02</p>
+                                    </div>
+                                    <div class = "flex gap-2 flex-col">
+                                        <p class = "font-[700] tracking-tighter">Quality Servicing Center</p>
+                                        <p>Diam dolor diam ipsum sit amet diam et eos</p>
+                                    </div>
+                                </div>
+                                 <!-- col -->
+                                           <!-- col -->
+                                <div class = "flex items-center gap-5">
+                                    <div>
+                                        <p class = "font-[700] p-3 bg-light">03</p>
+                                    </div>
+                                    <div class = "flex gap-2 flex-col">
+                                        <p class = "font-[700] tracking-tighter">Awards Winning Workers</p>
+                                        <p>Diam dolor diam ipsum sit amet diam et eos</p>
+                                    </div>
+                                </div>
+                                 <!-- col -->
+                         
+                            </div>
+                     
+                        <div>
+                            <div> 
+                                <button class = "py-4 px-12  bg-main text-white">READ MORE <i class = "fa fa-arrow-right ml-3"></i></button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </section>
+   <!-- total success -->
+   <section class = "mt-24">
+    <div class="total-success">
+        <div class="">
+            <!-- row -->
+            <div class="total-success-row grid   md:grid-cols-2 items-center lg:grid-cols-4 relative z-20" style = "background-image: url(./img/carousel-bg-1.jpg); background-position:center ; background-repeat: no-repeat;object-fit: cover;" >
+                <!-- col -->
+                  <div class = "container z-50 text-center">
+                    <div class = "flex flex-col gap-2  p-20 ">
+                        <p><i class="fa fa-check fa-2x text-white mb-3"></i></p>
+                        <p  class = "text-white text-4xl font-[700]">1254</p>
+                        <p class = "text-white"> Years Of Experience</p>
+                    </div>
+                  </div>
+                <!-- col -->
+                          <!-- col -->
+                          <div class = "container z-50 text-center">
+                            <div class = "flex flex-col gap-2  p-20 ">
+                                <p><i class="fa fa-users-cog fa-2x text-white mb-3"></i></p>
+                                <p  class = "text-white text-4xl font-[700]">1254</p>
+                                <p class = "text-white">Expert Technicians</p>
+                            </div>
+                          </div>
+                        <!-- col -->
+                                  <!-- col -->
+                  <div class = "container z-50 text-center">
+                    <div class = "flex flex-col gap-2  p-20 ">
+                        <p><i class="fa fa-users fa-2x text-white mb-3"></i></p>
+                        <p  class = "text-white text-4xl font-[700]">1254</p>
+                        <p class = "text-white"> Satisfied Clients</p>
+                    </div>
+                  </div>
+                <!-- col -->
+                          <!-- col -->
+                          <div class = "container z-50 text-center">
+                            <div class = "flex flex-col gap-2  p-20 ">
+                                <p><i class="fa fa-car fa-2x text-white mb-3"></i></p>
+                                <p  class = "text-white text-4xl font-[700]">1254</p>
+                                <p class = "text-white">Complete Projects</p>
+                            </div>
+                          </div>
+                        <!-- col -->
+            </div>
+            <!-- row -->
+        </div>
+    </div>
+</section>
+   <!-- total success -->
+   <!-- our services -->
+   <section class = "mt-24">
+        <div class="services">
+            <div class="container mx-auto px-4">
+                <h4 class = "text-xl text-main font-[600] text-center uppercase">//OUR SERVICES //</h4>
+                <h2  class = "text-3xl md:text-4xl lg:text-5xl font-[700] h-title text-center mb-12" >Explore Our Services</h2>
+                 <!-- our services row-->
+                <div class="services-row grid  md:grid-cols-2 lg:grid-cols-4 gap-6 ">
+                    <!-- our services col-->
+                    <div class="services-col">
+                        <div>
+                            <img  src="./img/service-1.jpg" alt="no image found">
+                        </div>
+                        <div class = 'flex gap-4 border-b-2 border-r-2 border-l-2 w-full flex-col  p-4'>
+                            <h4 class = " text-xl font-[700] tracking-tighter">Diagonostic Test</h4>
+                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
+                            <p><i class = "fa fa-check text-main mr-3"></i>Quality Servicing</p>
+                            <p><i class = "fa fa-check text-main mr-3"></i>Expert Workers</p>
+                            <p><i class = "fa fa-check text-main mr-3"></i>Modern Equipment</p>
+                            <p class = "text-main"><a href="#">Read More<i class="fa fa-arrow-right mr-2"></i></a></p>
+                        </div>
+                    </div>
+                    <div class="services-col">
+                        <div>
+                            <img  src="./img/service-2.jpg" alt="no image found">
+                        </div>
+                        <div class = 'flex gap-4 border-b-2 border-r-2 border-l-2 w-full flex-col  p-4'>
+                            <h4 class = " text-xl font-[700] tracking-tighter">Engine Servicing</h4>
+                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
+                            <p><i class = "fa fa-check text-main mr-3"></i>Quality Servicing</p>
+                            <p><i class = "fa fa-check text-main mr-3"></i>Expert Workers</p>
+                            <p><i class = "fa fa-check text-main mr-3"></i>Modern Equipment</p>
+                            <p class = "text-main"><a href="#">Read More<i class="fa fa-arrow-right mr-2"></i></a></p>
+                        </div>
+                    </div>
+             
+                    <div class="services-col">
+                        <div>
+                            <img  src="./img/service-3.jpg" alt="no image found">
+                        </div>
+                        <div class = 'flex gap-4 border-b-2 border-r-2 border-l-2 w-full flex-col  p-4'>
+                            <h4 class = " text-xl font-[700] tracking-tighter">Tires Replacement</h4>
+                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
+                            <p><i class = "fa fa-check text-main mr-3"></i>Quality Servicing</p>
+                            <p><i class = "fa fa-check text-main mr-3"></i>Expert Workers</p>
+                            <p><i class = "fa fa-check text-main mr-3"></i>Modern Equipment</p>
+                            <p class = "text-main"><a href="#">Read More<i class="fa fa-arrow-right mr-2"></i></a></p>
+                        </div>
+                    </div>
+             
+                    <div class="services-col">
+                        <div>
+                            <img  src="./img/service-4.jpg" alt="no image found">
+                        </div>
+                        <div class = 'flex gap-4 border-b-2 border-r-2 border-l-2 w-full flex-col  p-4'>
+                            <h4 class = " text-xl font-[700] tracking-tighter">Oil Changing</h4>
+                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
+                            <p><i class = "fa fa-check text-main mr-3"></i>Quality Servicing</p>
+                            <p><i class = "fa fa-check text-main mr-3"></i>Expert Workers</p>
+                            <p><i class = "fa fa-check text-main mr-3"></i>Modern Equipment</p>
+                            <p class = "text-main"><a href="#">Read More<i class="fa fa-arrow-right mr-2"></i></a></p>
+                        </div>
+                    </div>
+             
+             
+             
+                    <!-- our services col-->
+                </div>
+                <!-- our services row-->
+            </div>
+        </div>
+   </section>
+   <!-- our services -->
+
+   <!-- book Service -->
+   <section class = "mt-24">
+    <div class="book-service bg-light ">
+        <div class="container m-auto px-4">
+            <div class="book-service grid grid-cols-1 md:grid-cols-2 gap-16">
+                <div class = " flex justify-center items-center relative z-10 book-service-overlay">
+                    <img class = "w-full h-full" src="./img/carousel-bg-2.jpg" alt="no image found">
+                <div class="absolute z-50" >
+                   
+                        <h2 class = "text-white text-4xl font-[700] mb-5">Certified and Award Winning Car Repair Service Provider</h2>
+                        <p class = "text-white">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore sanctus sed et. Takimata takimata sanctus sed.</p>
+                     
+                </div>
+                </div>
+                <div class = 'flex flex-col gap-8 justify-center py-12'>
+                   <div>
+                    <h2 class = "text-3xl  md:text-4xl text-center md:text-start lg:text-5xl h-f-title font-[700] pb-4 md:mt-12 lg:mt-0">Book For A Service</h2>
+                    <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
+                   </div>
+                    <div>
+                        <form action="#">
+                            <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4">
+                                <div><input class = "w-full p-5 border outline-main" type="text" placeholder="Your Name" required></div>
+                                <div><input class = "w-full p-5 border outline-main" type="email" placeholder="Your Email "required></div>
+                                <div><input class = "w-full p-5 border outline-main" type="date" placeholder="Service Date" required></div>
+                                <div><select class = "w-full p-5 border outline-main" name="" id="">
+                                    <option value="">Select A Service</option>
+                                    <option value="">Service 1</option>
+                                    <option value="">Service 2</option>
+                                    <option value="">Service 3</option>
+                                    <option value="">Service 4</option>
+                                </select></div>
+
+                            </div>
+                            <div class = "mt-4"><textarea  class = "w-full p-5 border outline-main" name="" id="" placeholder = "Special Note"></textarea></div>
+                            <button class = 'w-full py-4 bg-main text-white mt-4'>Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+   <!-- free quote -->
+
+   <!-- Team Members -->
+   <section class = "mt-24">
+    <div class="team-members ">
+        <div class="container mx-auto px-4">
+            <h4 class = "text-xl text-main font-[600] text-center uppercase">//// OUR TECHNICIANS // //</h4>
+            <h2  class = "text-3xl md:text-4xl lg:text-5xl font-[700] h-title text-center mb-12" >Our Expert Technicians</h2>
+        <!-- team members row -->
+        <div class = "team-members-row gap-5 grid md:grid-cols-2 lg:grid-cols-4">
+            <!-- team members col -->
+            <div class="team-members-col">
+               <div class = "flex flex-col items-center ">
+                <img src="./img/team-1.jpg"  alt="no image found">
+                <div class = "social-overlay flex flex-col text-center">
+                    <i class = "fa-brands fa-facebook p-3 bg-white text-main hover-transition hover:text-white hover:bg-main"></i>
+                    <i class = "fa-brands fa-twitter p-3 bg-white text-main hover-transition hover:text-white hover:bg-main"></i>
+                    <i class = "fa-brands fa-linkedin p-3 bg-white text-main hover-transition hover:text-white hover:bg-main"></i>
+                </div>
+                <div class = "text-center border-b-2 border-r-2 border-l-2 w-full">
+                    <h4 class = "text-xl font-bold pt-5 mb-1">Full Name</h4>
+                    <p class = "pb-5">Designation</p>
+                </div>
+               </div>
+            </div>
+            <div class="team-members-col">
+                <div class = "flex flex-col items-center">
+                 <img src="./img/team-2.jpg" alt="no image found">
+                 <div class = "social-overlay flex flex-col text-center">
+                    <i class = "fa-brands fa-facebook p-3 bg-white text-main hover-transition hover:text-white hover:bg-main"></i>
+                    <i class = "fa-brands fa-twitter p-3 bg-white text-main hover-transition hover:text-white hover:bg-main"></i>
+                    <i class = "fa-brands fa-linkedin p-3 bg-white text-main hover-transition hover:text-white hover:bg-main"></i>
+                </div>
+                 <div class = "text-center w-full border-b-2 border-r-2 border-l-2">
+                     <h4 class = "text-xl font-bold pt-5 mb-1">Full Name</h4>
+                     <p class = "pb-5">Designation</p>
+                 </div>
+                </div>
+             </div>
+             <div class="team-members-col">
+                <div class = "flex flex-col items-center  ">
+                 <img src="./img/team-3.jpg" alt="no image found">
+                 <div class = "social-overlay flex flex-col text-center">
+                    <i class = "fa-brands fa-facebook p-3 bg-white text-main hover-transition hover:text-white hover:bg-main"></i>
+                    <i class = "fa-brands fa-twitter p-3 bg-white text-main hover-transition hover:text-white hover:bg-main"></i>
+                    <i class = "fa-brands fa-linkedin p-3 bg-white text-main hover-transition hover:text-white hover:bg-main"></i>
+                </div>
+                 <div class = "text-center border-b-2 border-r-2 border-l-2 w-full">
+                     <h4 class = "text-xl font-bold pt-5 mb-1">Full Name</h4>
+                     <p class = "pb-5">Designation</p>
+                 </div>
+                </div>
+             </div>
+             <div class="team-members-col">
+                <div class = "flex flex-col items-center ">
+                 <img src="./img/team-4.jpg" alt="no image found">
+                 <div class = "social-overlay flex flex-col text-center">
+                    <i class = "fa-brands fa-facebook p-3 bg-white text-main hover-transition hover:text-white hover:bg-main"></i>
+                    <i class = "fa-brands fa-twitter p-3 bg-white text-main hover-transition hover:text-white hover:bg-main"></i>
+                    <i class = "fa-brands fa-linkedin p-3 bg-white text-main hover-transition hover:text-white hover:bg-main"></i>
+                </div>
+                 <div class = "text-center border-b-2 border-r-2 border-l-2 w-full">
+                     <h4 class = "text-xl font-bold pt-5 mb-1">Full Name</h4>
+                     <p class = "pb-5">Designation</p>
+                 </div>
+                </div>
+             </div>
+            <!-- team members col -->
+        </div>
+         <!-- team members row -->
+        </div>
+       
+    </div>
+</section>
+   <!-- Team Members -->
+ </main>
+ <!-- main section -->
+ <!-- footer section -->
+ <footer class = "mt-24">
+    <div class="footer bg-black py-20">
+        <div class="container mx-auto px-4"> 
+            <!-- footer row -->
+            <div class="footer-row grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
+                <!-- footer col -->
+                <div class="footer-col text-light">
+                    <ul class = "flex flex-col gap-7">
+                        <h2 class = "text-2xl font-[600]">Address</h2>
+                     <div class = "flex flex-col gap-3">
+                        <li><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</li>
+                        <li><i class="fa fa-phone-alt me-3"></i>+012 345 67890</li>
+                        <li><i class="fa fa-envelope me-3"></i>info@example.com</li>
+                        <li>
+                            <a href="#"><i class = 'fab fa-facebook p-3 border hover-transition hover:bg-white hover:text-main '></i></a>
+                            <a href="#"><i class = 'fab fa-whatsapp p-3 border  hover-transition hover:bg-white hover:text-main '></i></a>
+                            <a href="#"><i class = 'fab fa-twitter p-3 border hover-transition hover:bg-white hover:text-main '></i></a>
+                            <a href="#"><i class = 'fab fa-telegram p-3 border hover-transition hover-transition hover:bg-white hover:text-main '></i></a>
+                        </li>
+                     </div>
+                   
+                    </ul>
+                   
+                </div>
+                <div class="footer-col text-light">
+                    <ul class = "flex flex-col gap-7">
+                        <h2 class = "text-2xl font-[600]">Services</h2>
+                     <div class = "flex flex-col gap-7 ">
+                      <li class = "text-light hover:text-main hover:tracking-widest hover-transition">
+                        <p class = "font-[600] mb-2">Monday-Friday</p>
+                        <p>9.00 AM -8.00 PM</p>
+                      </li>
+                      <li class = "text-light hover:text-main hover:tracking-widest hover-transition">
+                        <p class = "font-[600] mb-2">Saturday-Sunday</p>
+                        <p>9.00 AM - 11.00 PM</p>
+                      </li>
+            
+                    
+                     </div>
+                   
+                    </ul>
+                </div>
+                <div class="footer-col text-light">
+                    <ul class = "flex flex-col gap-7">
+                        <h2 class = "text-2xl font-[600]">Services</h2>
+                     <div class = "flex flex-col gap-3 ">
+                      <li> <a class = "text-light hover:text-main hover:tracking-widest hover-transition" href="#"><i class="fa-solid fa-angle-right mr-2"></i>Diagonostic Test</a></li>
+                      <li> <a class = "text-light hover:text-main hover:tracking-widest hover-transition" href="#"><i class="fa-solid fa-angle-right mr-2"></i>Engine Servicing</a></li>
+                      <li> <a class = "text-light hover:text-main hover:tracking-widest hover-transition" href="#"><i class="fa-solid fa-angle-right mr-2"></i>Tires Replacement</a></li>
+                      <li> <a class = "text-light hover:text-main hover:tracking-widest hover-transition" href="#"><i class="fa-solid fa-angle-right mr-2"></i>Oil Changing </a></li>
+                      <li> <a class = "text-light hover:text-main hover:tracking-widest hover-transition" href="#"><i class="fa-solid fa-angle-right mr-2"></i>Vacum Cleaning</a></li>
+                    
+                     </div>
+                   
+                    </ul>
+                </div>
+                <div class="footer-col text-light">
+                    <ul class = "flex flex-col gap-7">
+                        <h2 class = "text-2xl font-[600]">Newsletter</h2>
+                       <div class = "flex flex-col gap-3 ">
+                        <li><p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p></li>
+                        <li><div class = "relative">
+                            <input type="email" class = "p-4 w-full text-black outline-none border-none" placeholder="Your Email" >
+                                <button type = "submit" class = "absolute top-0 right-0 bg-main h-full px-6">Sign Up</button>
+                        </div></li>
+                        
+                     </div>
+                     
+                    </ul>
+                </div>
+                <!-- footer col -->
+            </div>
+             <!-- footer row -->
+             <hr class = "my-8 w-full bg-white opacity-75">
+             <div>
+                
+                <p class = " text-light flex items-center justify-center">&copyRafi,All Right Reserved.</p>
+             </div>
+        </div>
+    </div>
+ </footer>
+ <!-- footer section -->
+
+ <script src = "./js/script.js"></script>
+ <!-- swipper js link  -->
+ <script src="./js/swiper-bundle.min.js"></script>
+ <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+ <!-- swipper js link  -->
+</body>
+</html>
